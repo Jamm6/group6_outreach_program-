@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A day of Kindness and Compassion</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #A87676;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-image {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            height: 60px; /* Adjust height according to your requirement */
+        }
+
+        nav {
+            background-color: #CA8787;
+            color: #fff;
+            padding: 0.5em 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 1em;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Add transform transition */
+            display: block;
+            text-align: center;
+        }
+
+
+        nav a img {
+            margin-right: 0.5em; /* Space between image and text */
+            height: 20px; /* Adjust according to your requirement */
+            width: auto; /* Maintain aspect ratio */
+        }
+
+        nav a:hover {
+            background-color: #F72C5B;
+            transform: scale(1.1); /* Scale up on hover */
+        }
+
+        .container {
+            width: 80%;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #FFD0D0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .text-content {
+            flex: 1;
+            padding: 1em;
+            font-size: 1.5em;
+        }
+
+        .image-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #A87676; /* Footer color */
+            color: #fff;
+            position: relative; /* Position relative for alignment */
+            margin-top: 2em; /* Space above footer */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="3208321.png" alt="Header Image" class="header-image">
+        <h1>SAINT MARIA MATTHIAS (ST. PAUL COMMUNITY OUTREACH PROGRAM)</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li class="slide-in"><a href="index.html"><img src="3d-home-icon-free-png.webp" alt="Home">Home</a></li>
+            <li class="slide-in" style="animation-delay: 0.1s;"><a href="about.html"><img src="3d-icon-of-info-information-about-free-png.png" alt="About">About</a></li>
+            <li class="slide-in" style="animation-delay: 0.2s;"><a href="programs.html"><img src="heart.webp" alt="Programs">Programs</a></li>
+            <li class="slide-in" style="animation-delay: 0.3s;"><a href="contacts.html"><img src="phone-call-3d-icon-free-png.png" alt="Contact">Contact</a></li>
+            <li class="slide-in" style="animation-delay: 0.4s;"><a href="get-involved.html" class="get-involved-button"><img src="9763592.webp" alt="Get Involved">Get Involved</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="text-content fade-in">
+            <p>
+                During the community outreach of 9-Saint Paul, they did a huge impact in today's society. They started a program with a prayer, they play together with an audience, and eat together with children inside the orphanage.
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="IMG20250201141203 (1).jpg" alt="Description of image">
+        </div>
+    </div>
+
+    <footer>
+        <p>GROUP 6, 9-SAINT PAUL (2025)</p>
+    </footer>
+
+    <script>
+        document.querySelector('header h1').addEventListener('click', function() {
+            let newText = prompt("Enter new header text:", this.innerText);
+            if (newText) {
+                this.innerText = newText;
+            }
+        });
+    </script>
+
+</body>
+</html>

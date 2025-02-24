@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Day of Kindness and Compassion</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace; 
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        header {
+            background-color: #A87676; 
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            cursor: pointer; 
+            position: relative; /* Adjusted for image placement */
+        }
+
+        .header-image {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 60px; /* Adjust height as needed */
+        }
+
+        nav {
+            background-color: #CA8787; 
+            color: #fff;
+            padding: 0.5em 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block; 
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 1em;
+            position: relative; /* Adjusted for image placement */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Add transform transition */
+            display: block;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #F72C5B;
+            transform: scale(1.1); /* Scale up on hover */
+        }
+
+
+        .nav-icon {
+            height: 20px; /* Set a consistent height for navigation icons */
+            vertical-align: middle; /* Aligning icon with text */
+            margin-right: 5px; /* Spacing between icon and text */
+        }
+
+        .container {
+            width: 80%;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #FFD0D0; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .background-image {
+            position: relative;
+            height: auto; 
+            min-height: 700px; 
+            background-image: url("DSC03521.JPG");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .welcome-text {
+            text-align: center;
+            font-size: 2em; 
+            padding: 1em;
+            color: rgb(255, 255, 255); 
+            font-weight: bold; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+        }
+
+        .get-involved-button {
+            background-color: #CA8787;  
+            color: #fff; 
+            padding: 0.75em 1.5em;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .get-involved-button:hover {
+            background-color: #F72C5B; 
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .fade-out {
+            animation: fadeOut 0.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        footer {
+            background-color: #A87676; 
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            position: relative; 
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="3208321.png" alt="Logo" class="header-image">
+        <h1>SAINT MARIA MATTHIAS (ST. PAUL COMMUNITY OUTREACH PROGRAM)</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li class="slide-in"><a href="index.html"><img src="3d-home-icon-free-png.webp" alt="Home" class="nav-icon">Home</a></li>
+            <li class="slide-in" style="animation-delay: 0.1s;"><a href="about.html"><img src="3d-icon-of-info-information-about-free-png.png" alt="About" class="nav-icon">About</a></li>
+            <li class="slide-in" style="animation-delay: 0.2s;"><a href="programs.html"><img src="heart.webp" alt="Programs" class="nav-icon">Programs</a></li>
+            <li class="slide-in" style="animation-delay: 0.3s;"><a href="contacts.html"><img src="phone-call-3d-icon-free-png.png" alt="Contact" class="nav-icon">Contact</a></li>
+            <li class="slide-in" style="animation-delay: 0.4s;"><a href="get-involved.html" class="get-involved-button"><img src="9763592.webp" alt="Get Involved" class="nav-icon">Get Involved</a></li>
+        </ul>
+    </nav>
+
+    <div class="background-image">
+        <div class="welcome-text">
+            <h1>A Day of Kindness and Compassion.</h1>
+            <p>Welcome to our website! This is the website created by Group 6, 9-SAINT PAUL. Feel free to explore!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>GROUP 6, 9-SAINT PAUL (2025)</p>
+    </footer>
+
+    <script>
+        const links = document.querySelectorAll('nav a');
+
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); 
+                const targetPage = this.getAttribute('href');
+
+                document.body.classList.add('fade-out');
+
+                setTimeout(() => {
+                    window.location = targetPage;
+                }, 500);
+            });
+        });
+
+        document.querySelector('header h1').addEventListener('click', function() {
+            let newText = prompt("Enter new header text:", this.innerText);
+            if (newText) {
+                this.innerText = newText;
+            }
+        });
+
+        document.body.addEventListener('animationend', () => {
+            document.body.classList.remove('fade-out');
+        });
+    </script>
+
+</body>
+</html>
